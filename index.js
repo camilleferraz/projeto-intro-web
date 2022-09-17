@@ -1,47 +1,70 @@
-// Lista de elementos químico
-const elemento1 = "Hidrogênio"
-const numeroAtomico1 =  1
-const massaAtomica1 =  1.008 
-const simbolo1 =  "H"
-const isSintetico1 =  false
-const exemplosEmMoleculas1 = ["H2,H2SO4"]
+// Trnaformando os elementos e suas propriedades em objetos
 
-const elemento2 = "Lítio"
-const numeroAtomico2 =  3
-const massaAtomica2 =  6.941
-const simbolo2 =  "Li"
-const isSintetico2 =  false
-const exemplosEmMoleculas2 = ["LiAl(Si2O5)2"]
+let elemento1 = {
+elemento: "Hidrogênio",
+numeroAtomico: 1,
+massaAtomica: 1.008, 
+simbolo: "H",
+isNotSitetico: true,
+exemplosEmMoleculas: ["H2,H2SO4"]
+}
 
-const elemento3 = "Sódio"
-const numeroAtomico3 =  11
-const massaAtomica3 =  22.990
-const simbolo3 =  "Na"
-const isSintetico3 =  false
-const exemplosEmMoleculas3 = ["NaCl", "NaBr"]
+let elemento2 = {
+elemento: "Lítio",
+numeroAtomico:  3,
+massaAtomica:  6.941,
+simbolo:  "Li",
+isnotSintetico:  true,
+exemplosEmMoleculas: ["LiAl(Si2O5)2"]
+}
 
-//Média doe número atômico
-const mediaNumeroAtomico = (numeroAtomico1+numeroAtomico2+numeroAtomico3)/3
-
-//Média de massa atômica
-const mediaMassa = (massaAtomica1+massaAtomica2+massaAtomica3)/3
-
-//Checando se todos os valores boolenaos são verdadeiras
-
-const verificaIsSintetico = isSintetico1&&isSintetico2&&isSintetico3
-
-console.log(`Algum elemento é sintético? ${verificaIsSintetico}`)
+let elemento3 = {
+elemento: "Sódio",
+numeroAtomico:  11,
+massaAtomica: 22.990,
+simbolo:  "Na",
+isNotSintetico:  true,
+exemplosEmMoleculas: ["NaCl", "NaBr"]
+}
 
 
-//Impressão dessas médias
-console.log(`Média de números atômicos: ${mediaNumeroAtomico}`,`\n Média de massas atômicas: ${massaAtomica1}`)
+//Criando um array vazio
 
-//Relatório do elemento 1
-console.log(elemento1.toUpperCase(),`\nNúmero atômico: ${numeroAtomico1}`,`\nMassa atômica: ${massaAtomica1}`,`\nSímbolo: ${simbolo1}`,`\nÉ sintético: ${isSintetico1}`,`\nPresente nas moléculas: ${exemplosEmMoleculas1}`)
+let arrayObjetosElementos  = []
 
-//Relatório do elemento 2
-console.log(elemento2.toUpperCase(),`\nNúmero atômico: ${numeroAtomico2}`,`\nMassa atômica: ${massaAtomica2}`,`\nSímbolo: ${simbolo2}`,`\nÉ sintético: ${isSintetico2}`,`\nPresente nas moléculas: ${exemplosEmMoleculas2}`)
+//Adicionando os objetos com push ao array vazio criado
 
-//Relatório do elemento 3
-console.log(elemento3.toUpperCase(),`\nNúmero atômico: ${numeroAtomico3}`,`\nMassa atômica: ${massaAtomica3}`,`\nSímbolo: ${simbolo3}`,`\nÉ sintético: ${isSintetico3}`,`\nPresente nas moléculas: ${exemplosEmMoleculas3}`)
+arrayObjetosElementos.push(elemento1,elemento2,elemento3)
 
+//Adicionando novos elementos a partir da verificação de ser um elemento natural.
+
+const elemento4 = {
+    nome: "Berílio",
+    numeroAtomico:4,
+    massaAtomica: 9.012,
+    simbolo: "Be",
+    isNotSintetico: true,
+    exemplosEmMoleculas:["BeCl2","BCl3"]
+}
+if(elemento4.isNotSintetico === true){
+    arrayObjetosElementos.push(elemento4)
+}else{
+    alert(`O elemento ${elemento4.nome} não foi adicionado, pois é sintético`)
+}
+
+
+const elemento5 = {
+    nome: "Promécio",
+    numeroAtomico:61,
+    massaAtomica: 145,
+    simbolo: "Pm",
+    isNotSintetico: false
+}
+
+if(elemento5.isNotSintetico === true){
+    arrayObjetosElementos.push(elemento5)
+}else{
+    alert(`O elemento ${elemento5.nome} não foi adicionado, pois é sintético`)
+}
+
+console.log(arrayObjetosElementos)
