@@ -1,4 +1,4 @@
-// Trnaformando os elementos e suas propriedades em objetos
+// Transformando os elementos e suas propriedades em objetos
 
 let elemento1 = {
 elemento: "Hidrogênio",
@@ -39,7 +39,7 @@ arrayObjetosElementos.push(elemento1,elemento2,elemento3)
 //Adicionando novos elementos a partir da verificação de ser um elemento natural.
 
 const elemento4 = {
-    nome: "Berílio",
+    elemento: "Berílio",
     numeroAtomico:4,
     massaAtomica: 9.012,
     simbolo: "Be",
@@ -68,3 +68,72 @@ if(elemento5.isNotSintetico === true){
 }
 
 console.log(arrayObjetosElementos)
+
+
+const elemento6 = {
+    elemento: "Magnésio",
+    numeroAtomico:12,
+    massaAtomica: 24.31,
+    simbolo: "Mg",
+    isNotSintetico: true,
+    exemplosEmMoleculas:["Mg(OH)2","MgCO3"]
+
+}
+
+if(elemento6.isNotSintetico === true){
+    arrayObjetosElementos.push(elemento6)
+}else{
+    alert(`O elemento ${elemento6.nome} não foi adicionado, pois é sintético`)
+}
+
+
+
+//Recriando o relatório com laços
+let stringExemplo = "" 
+for(elemento in arrayObjetosElementos){
+    for(exemplo in elemento.exemplosEmMoleculas)
+stringExemplo+= molecula
+}
+
+console.log("======================")
+console.log(stringExemplo)
+
+//Relatório Geral
+
+for(objeto of arrayObjetosElementos){
+    for(propriedades in objeto){
+        if(propriedades === "elemento"){
+            console.log(` \n${objeto[propriedades].toUpperCase()}\n `)
+        }else{ 
+            console.log(`${propriedades}: ${objeto[propriedades]}`)}
+        
+    }
+}
+
+function objetosEmStrings(objeto){
+    let stringRelatorio = ""
+    for(propriedades in objeto){
+        stringRelatorio += ` ${propriedades}: ${objeto[propriedades]}\n`
+       }
+       return console.log(stringRelatorio)
+}
+
+console.log("====================================================")
+
+function funcaoFiltro(array,string){
+    for(objeto of array){
+        for(item in objeto){
+            if(objeto[item] === string){
+                console.log(`${item}: ${string}`)
+                return
+            }
+          
+        }
+    }
+        alert("Item não encontrado")
+}
+ 
+
+funcaoFiltro(arrayObjetosElementos,"F")
+
+
