@@ -53,19 +53,19 @@ if(elemento4.isNotSintetico === true){
 }
 
 
-const elemento5 = {
-    nome: "Promécio",
-    numeroAtomico:61,
-    massaAtomica: 145,
-    simbolo: "Pm",
-    isNotSintetico: false
-}
+// const elemento5 = {
+//     nome: "Promécio",
+//     numeroAtomico:61,
+//     massaAtomica: 145,
+//     simbolo: "Pm",
+//     isNotSintetico: false
+// }
 
-if(elemento5.isNotSintetico === true){
-    arrayObjetosElementos.push(elemento5)
-}else{
-    alert(`O elemento ${elemento5.nome} não foi adicionado, pois é sintético`)
-}
+// if(elemento5.isNotSintetico === true){
+//     arrayObjetosElementos.push(elemento5)
+// }else{
+//     alert(`O elemento ${elemento5.nome} não foi adicionado, pois é sintético`)
+// }
 
 console.log(arrayObjetosElementos)
 
@@ -134,6 +134,6 @@ function funcaoFiltro(array,string){
 }
  
 
-funcaoFiltro(arrayObjetosElementos,"F")
+funcaoFiltro(arrayObjetosElementos,"Mg")
 
 
