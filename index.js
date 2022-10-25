@@ -1,30 +1,30 @@
 // Transformando os elementos e suas propriedades em objetos
 
-let elemento1 = {
-elemento: "Hidrogênio",
-numeroAtomico: 1,
-massaAtomica: 1.008, 
-simbolo: "H",
-isNotSitetico: true,
-exemplosEmMoleculas: ["H2,H2SO4"]
+let planeta1 = {
+nome: "Mercúrio",
+duracaoAno: 88,
+gravidade: 3.7, 
+atmosferaComposicao: ["Hélio","Sódio","Oxigênio"],
+sistemaSolar: true,
+Curiosidade: ["É o planeta mais denso do sistema solar."]
 }
 
-let elemento2 = {
-elemento: "Lítio",
-numeroAtomico:  3,
-massaAtomica:  6.941,
-simbolo:  "Li",
-isnotSintetico:  true,
-exemplosEmMoleculas: ["LiAl(Si2O5)2"]
+let planeta2 = {
+nome: "Vênus",
+duracaoAno: 225,
+gravidade: 8.87, 
+atmosferaComposicao: ["CO2","N2"],
+sistemaSolar: true,
+Curiosidade: ["Um dia em vênus é mais longo do que um ano."]
 }
 
-let elemento3 = {
-elemento: "Sódio",
-numeroAtomico:  11,
-massaAtomica: 22.990,
-simbolo:  "Na",
-isNotSintetico:  true,
-exemplosEmMoleculas: ["NaCl", "NaBr"]
+let planeta3 = {
+nome: "Terra",
+duracaoAno: 365,
+gravidade: 9.8, 
+atmosferaComposicao: ["Nitrogênio","Oxigênio"],
+sistemaSolar: true,
+Curiosidade: ["A terra é o único planeta do sistema solar dividido por placas tectônicas."]
 }
 
 
@@ -34,56 +34,57 @@ let arrayObjetosElementos  = []
 
 //Adicionando os objetos com push ao array vazio criado
 
-arrayObjetosElementos.push(elemento1,elemento2,elemento3)
+arrayObjetosElementos.push(planeta1,planeta2,planeta3)
 
 //Adicionando novos elementos a partir da verificação de ser um elemento natural.
 
-const elemento4 = {
-    elemento: "Berílio",
-    numeroAtomico:4,
-    massaAtomica: 9.012,
-    simbolo: "Be",
-    isNotSintetico: true,
-    exemplosEmMoleculas:["BeCl2","BCl3"]
+const planeta4 = {
+nome: "Marte",
+duracaoAno: 687,
+gravidade: 3.721, 
+atmosferaComposicao: ["Nitrogênio","CO2"],
+sistemaSolar: true,
+Curiosidade: ["Uma espaçonave dura apenas cerca de 60 dias em uma viagem à Marte."]
 }
-if(elemento4.isNotSintetico === true){
-    arrayObjetosElementos.push(elemento4)
+if(planeta4.sistemaSolar === true){
+    arrayObjetosElementos.push(planeta4)
 }else{
-    alert(`O elemento ${elemento4.nome} não foi adicionado, pois é sintético`)
+    alert(`O elemento ${planeta4.nome} não foi adicionado, pois é sintético`)
 }
 
 
-const elemento5 = {
-    nome: "Promécio",
-    numeroAtomico:61,
-    massaAtomica: 145,
-    simbolo: "Pm",
-    isNotSintetico: false
+const planeta5 = {
+nome: "Kepler 8b",
+duracaoAno: 3.35,
+gravidade: 0.994, 
+atmosferaComposicao: ["desconhecido"],
+sistemaSolar: false,
+Curiosidade: ["Esse planeta está a 1,9 anos-luz da terra."] 
 }
 
-if(elemento5.isNotSintetico === true){
+if(planeta5.sistemaSolar === true){
     arrayObjetosElementos.push(elemento5)
 }else{
-    alert(`O elemento ${elemento5.nome} não foi adicionado, pois é sintético`)
+    alert(`O planeta ${planeta5.nome} não foi adicionado, pois não pertence ao sistema solar`)
 }
 
 console.log(arrayObjetosElementos)
 
 
-const elemento6 = {
-    elemento: "Magnésio",
-    numeroAtomico:12,
-    massaAtomica: 24.31,
-    simbolo: "Mg",
-    isNotSintetico: true,
-    exemplosEmMoleculas:["Mg(OH)2","MgCO3"]
+const planeta6 = {
+nome: "Júpiter",
+duracaoAno: 4380,
+gravidade: 24.79, 
+atmosferaComposicao: ["Hidrogênio","CO2"],
+sistemaSolar: true,
+Curiosidade: ["Caberiam aproximadamente mil terras em Júpiter"]
 
 }
 
-if(elemento6.isNotSintetico === true){
-    arrayObjetosElementos.push(elemento6)
+if(planeta6.sistemaSolar === true){
+    arrayObjetosElementos.push(planeta6)
 }else{
-    alert(`O elemento ${elemento6.nome} não foi adicionado, pois é sintético`)
+    alert(`O planeta ${planeta6.nome} não foi adicionado, pois não pertence ao sistema solar`)
 }
 
 
@@ -91,8 +92,8 @@ if(elemento6.isNotSintetico === true){
 //Recriando o relatório com laços
 let stringExemplo = "" 
 for(elemento in arrayObjetosElementos){
-    for(exemplo in elemento.exemplosEmMoleculas)
-stringExemplo+= molecula
+    for(exemplo in elemento.atmosferaComposicao)
+stringExemplo += molecula
 }
 
 console.log("======================")
@@ -102,7 +103,7 @@ console.log(stringExemplo)
 
 for(objeto of arrayObjetosElementos){
     for(propriedades in objeto){
-        if(propriedades === "elemento"){
+        if(propriedades === "nome"){
             console.log(` \n${objeto[propriedades].toUpperCase()}\n `)
         }else{ 
             console.log(`${propriedades}: ${objeto[propriedades]}`)}
@@ -134,6 +135,6 @@ function funcaoFiltro(array,string){
 }
  
 
-funcaoFiltro(arrayObjetosElementos,"F")
+funcaoFiltro(arrayObjetosElementos,"Marte")
 
 

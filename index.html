@@ -6,8 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="./swiper-bundle.min.css">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+   
+    <header>
+        <img  class="logo" src="./img-projeto-web/logo.png" alt="">
+        <h2 class="titulo">Escolha seu <span class="planeta-title"><strong>planeta.</strong></span></h2>
+        <img src="./img-projeto-web/purple-rocket.png" alt="" class="foguete">
+   
+        <section class="principal">
+            <section class="search">
+                <input type="text">
+                <img class="button" src="./img-projeto-web/seach-button.png">
+            </section>
+    </header>
+
     
+        
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card-conteudo swiper-slide" id="card" onclick="cardChanger()" onmouseout="contentRemove()">
+                       
+                        <h2>Mercurio</h2>
+                        <img src="./img-projeto-web/mercury.png" alt="" class="planeta">
+                        
+                    </div>
+
+                        <div class="card-conteudo swiper-slide" >
+                            <h2>Venus</h2>
+                            <img src="./img-projeto-web/venus.png" alt="" class="planeta">
+                           
+                            </div>
+
+                            <div class="card-conteudo swiper-slide">
+                                <h2>Terra</h2>
+                                <img src="./img-projeto-web/earth.png" alt="" class="planeta">
+                               
+                                </div>
+
+                                <div class="card-conteudo swiper-slide">
+                                    <h2>Marte</h2>
+                                    <img src="./img-projeto-web/mars.png" alt="" class="planeta">
+                                  
+                                    </div>
+
+                                    <div class="card-conteudo swiper-slide">
+                                        <h2>Júpiter</h2>
+                                        <img src="./img-projeto-web/jupiter.png" alt="" class="planeta">
+                                        
+                                        </div>
+
+                                        <div class="card-conteudo swiper-slide">
+                                            <h2>Saturno</h2>
+                                            <img src="./img-projeto-web/saturn.png" alt="" class="planeta">
+                                           
+                                            </div>
+
+                                            <div class="card-conteudo swiper-slide">
+                                                <h2>Urano</h2>
+                                                <img src="./img-projeto-web/urano.png" alt="" class="planeta">
+                                               
+                                                </div>
+
+                                                <div class="card-conteudo swiper-slide">
+                                                    <h2>Netuno</h2>
+                                                    <img src="./img-projeto-web/neptun.png" alt="" class="planeta">
+                                                   
+                                                    </div>
+
+                                                    <div class="card-conteudo swiper-slide">
+                                                        <h2>Plutão</h2>
+                                                        <img src="./img-projeto-web/earth.png" alt="" class="planeta">
+                                                       
+                                                        </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+                
+
+
+                
+    </section>
+
+    <footer>
+        <img class="moon" src="./img-projeto-web/purple-moon.png" alt="">
+    </footer>
+
+    <script src="./swiper-bundle.min.js"></script>
+    <script src="./swiperjava.js"></script>
+
+    <script type="text/javascript">
+
+        function cardChanger(){
+            let activeCard = document.getElementById("card")
+            const conteudo = document.createElement("p")
+            const conteudoText = document.createTextNode( "Esse planeta possui dimaetro de x, temperatura de aproximadamente y graus e ainda possui aneis de rotação")
+            conteudo.appendChild(conteudoText)
+            conteudo.setAttribute("class","texto-card")
+            activeCard.insertAdjacentElement('beforeend',conteudo)
+
+            }
+
+        function contentRemove(){
+            let removeConteudo = document.querySelector(".texto-card")
+            removeConteudo.remove()
+
+        }
+
+    </script>
 </body>
 </html>
