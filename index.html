@@ -9,7 +9,6 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
    
     <header>
         <img  class="logo" src="./img-projeto-web/logo.png" alt="">
@@ -20,6 +19,7 @@
             <form class="search">
                 <label for="pesquisa"></label>
                 <button type="button" onclick="filtrarPesquisa()"> <img class="button-img" src="./img-projeto-web/seach-button.png"height ="80" width="80"></button>
+                <div><button class="reset" type="reset" ><img src="./img-projeto-web/x.png" alt="" width="20px" class="img-x"></div>
                 <div><input class="input" name="pesquisa" type="text" id="pesquisa-id" placeholder="Digite um planeta do sistema solar!"></div>
             </form>
     </header>
@@ -41,12 +41,15 @@
 
                 
     </section>
-    <section class="conteudo-filtrado">
-        
-    </section>       
-
+    <section class="conteudo-filtrado"></section>       
+        </div>
     <footer>
-        <!-- <img class="moon" src="./img-projeto-web/purple-moon.png" alt=""> -->
+        <div class="box-redes">
+            
+            <a href="https://www.linkedin.com/in/camille-ferraz-5a5a47252/" target="_blank"><img class="logo-link" src="./img-projeto-web/linkedin.png" alt="" width="55px"></a>
+            <a href="https://github.com/camilleferraz" target="_blank"><img  class="logo-git" src="./img-projeto-web/github.png" alt="" width="55px"></a>
+        </div>
+        <img class="moon" src="./img-projeto-web/13.png" alt="">
     </footer>
 
     <script src="./swiper-bundle.min.js"></script>

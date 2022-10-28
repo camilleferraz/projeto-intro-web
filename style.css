@@ -12,6 +12,13 @@ body{
 
 }
 
+.background{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+
 header{
 height: 43vh;
 }
@@ -24,11 +31,11 @@ height: 43vh;
 }
 
 .foguete{
-    width: 50vw;
+    width: 45vw;
     position: fixed;
     top: -10px;
     right: 0;
-    max-width: 800px;
+    
 }
 
 .titulo{
@@ -42,27 +49,26 @@ height: 43vh;
 .titulo-planeta{
     color: #d9d9d9;
     font-weight: 400;
-    font-size: 5vh;
-   
-  
-   
+    font-size: 4vh;
+    text-decoration: none;
    
 }
 
 .titulo-planeta:hover{
-    color: #160730;
+    color: #200a46;
 }
 
 
 .moon{
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 30vw;
-    max-width: 550px;
+    bottom: -20px;
+    left: -120px;
+    width: 35vw;
     min-width: 400px;
-    z-index: 1;
+    z-index: -1;
 }
+
+
 
 
 
@@ -80,6 +86,15 @@ height: 43vh;
     align-items: center;
     
     
+    
+}
+
+.reset{
+    position: absolute;
+    top: 28.17vh;
+    left: 30.9vw;
+    background-color: white;
+   
 }
 
 .input{
@@ -125,17 +140,17 @@ button{
 }
     
 .card-conteudo{
-min-height: 300px;
+min-height: 250px;
 min-width: 200px;
 max-height: 100px;
 max-width: 200px;
 width: 20vw;
-height: 10vw;
+height: 5vw;
 border-radius: 10px;
-    padding-top: 7vh;
+    padding-top: 12vh;
     padding-right: 1vw;
     padding-left: 1vw;
-    font-size: small;
+    font-size: 0.83em;
     background: rgba(225, 255, 255, 0.1);
     display: flex;
     display: grid;
@@ -152,24 +167,20 @@ border-radius: 10px;
    
 }
 
-.conteudo-filtrado{
-    
-    margin-right: 0px;
-    padding-bottom: 200px;
-}
+
 
 .filter-card{
-    min-height: 300px;
+    min-height: 250px;
     min-width: 200px;
     max-height: 100px;
     max-width: 200px;
     width: 20vw;
-    height: 10vw;
+    height: 5vw;
     border-radius: 10px;
-        padding-top: 7vh;
+        padding-top: 12vh;
         padding-right: 1vw;
         padding-left: 1vw;
-        font-size: small;
+        font-size: 0.83em;
         background: rgba(225, 255, 255, 0.1);
         display: flex;
         display: grid;
@@ -183,6 +194,7 @@ border-radius: 10px;
         transform: translateY(5px);
         overflow: visible;
         transition: 0.5s;
+       
 }
 
 .card-conteudo:hover{
@@ -200,7 +212,7 @@ border-radius: 10px;
     padding-left: 50px;
     padding-top: 40px;
     padding-bottom: 10px;
-    height: 300px;
+    left: 200px;
     
    
 }
@@ -209,12 +221,58 @@ border-radius: 10px;
 li{
 font-size: smaller;
 list-style: none;
-padding: 0.2em;
+padding: 0.5em;
 
 }
 
-a{
-    text-decoration: none;
+
+
+
+
+.box-redes{
     color: #d9d9d9;
+    font-size: 0.8em;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 4vw;
+    height: 20vh;
+    position: absolute;
+    left: 0px;
+    bottom: 144px;
+    margin: 3px;
+    background: rgba(116, 25, 139, 0.6);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    backdrop-filter: blur(5px);
+    
+   
+    
 }
 
+.logo-git:hover{
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+
+.logo-git{
+    transform: translateY(0px);
+    transition: 0.5s;
+}
+
+.logo-link:hover{
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+
+.logo-link{
+    transform: translateY(0px);
+    transition: 0.5s;
+}
+
+
+.feito-por:hover{
+    color: #160730;
+    cursor: pointer;
+}
